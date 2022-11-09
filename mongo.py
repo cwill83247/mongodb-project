@@ -1,11 +1,12 @@
 import os
 import pymongo
+
 if os.path.exists("env.py"):    #this line is basically saying if its env.py then its local so use local environment variables
     import env
 
 MONGO_URI = os.environ.get("MONGO_URI")       #referencing the MOMGO_URI in env.py    
 DATABASE = "my1stMongoDB"
-COLLECTION ="celebrities"
+COLLECTION = "celebrities"
 
 def mongo_connect(url):                 #function for mongo expecting 1 paramater to be passed in when it gets called/invoked
     try:

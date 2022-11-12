@@ -10,7 +10,7 @@ COLLECTION = "celebrities"
 
 def mongo_connect(url):                 #function for mongo expecting 1 paramater to be passed in when it gets called/invoked
     try:
-        conn = pymongo.MongoClient(url)
+        conn = pymongo.MongoClient(url)   #std syntax
         print("Mongo is connected")
         return conn
     except pymongo.errors.ConnectionFailure as e:              #std for errors
